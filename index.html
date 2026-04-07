@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novaxel — Developer & ML Practitioner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">Novaxel<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:contact@novalightart.com" class="nav-cta">Hire me</a>
+      <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile drawer -->
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#about" onclick="closeNav()">About</a>
+      <a href="#work" onclick="closeNav()">Work</a>
+      <a href="#contact" onclick="closeNav()">Contact</a>
+      <a href="mailto:contact@novalightart.com" onclick="closeNav()" class="drawer-cta">Hire me</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for new projects
+        </div>
+        <h1 class="hero-title">
+          I build things<br>
+          <span class="title-muted">that actually work.</span>
+        </h1>
+        <p class="hero-sub">
+          Solo developer and ML practitioner. I build across the full stack — web platforms,
+          mobile apps, data pipelines, and creative tooling. Fast, intentional, solo.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">View my work</a>
+          <a href="https://github.com/Alienxcript" target="_blank" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <!-- Code card — keeps Novaxel colors -->
+      <div class="hero-card" aria-hidden="true">
+        <div class="code-card">
+          <div class="cc-header">
+            <span class="cc-dot cc-r"></span>
+            <span class="cc-dot cc-y"></span>
+            <span class="cc-dot cc-g"></span>
+            <span class="cc-filename">nova.config.ts</span>
+          </div>
+          <div class="cc-body">
+            <div><span class="c-mute">// developer profile</span></div>
+            <div>&nbsp;</div>
+            <div><span class="c-kw">export const</span> <span class="c-fn">Nova</span> <span class="c-br">= {</span></div>
+            <div>&nbsp; <span class="c-nm">name</span>: <span class="c-st">"Nova"</span>,</div>
+            <div>&nbsp; <span class="c-nm">role</span>: <span class="c-st">"Full-stack Dev"</span>,</div>
+            <div>&nbsp; <span class="c-nm">brand</span>: <span class="c-st">"Novaxel"</span>,</div>
+            <div>&nbsp; <span class="c-nm">stack</span>: <span class="c-br">[</span></div>
+            <div>&nbsp; &nbsp; <span class="c-st">"Next.js"</span>, <span class="c-st">"Python"</span>,</div>
+            <div>&nbsp; &nbsp; <span class="c-st">"React Native"</span>, <span class="c-st">"ML"</span>,</div>
+            <div>&nbsp; &nbsp; <span class="c-st">"Kotlin"</span>, <span class="c-st">"Solana"</span></div>
+            <div>&nbsp; <span class="c-br">]</span>,</div>
+            <div>&nbsp; <span class="c-nm">passion</span>: <span class="c-st">"building"</span> <span class="c-mute">// always</span></div>
+            <div><span class="c-br">}</span><span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">// 01 about</p>
+
+      <!-- Profile row — inspired by screenshot -->
+      <div class="about-profile reveal">
+        <div class="profile-left">
+          <div class="avatar-wrap">
+            <!-- Replace src with your actual photo -->
+            <div class="avatar-placeholder">N</div>
+            <span class="avatar-status" title="Available"></span>
+          </div>
+          <div class="profile-meta">
+            <h2 class="profile-name">Nova <span class="verified">✦</span></h2>
+            <p class="profile-title">Developer, illustrator &amp; ML Practitioner</p>
+            <p class="profile-sub">Building under <strong>Novaxel</strong></p>
+          </div>
+        </div>
+        <div class="profile-right">
+          <p class="section-label" style="margin-bottom:16px;">Tools &amp; Stack</p>
+          <div class="tools-grid">
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                  <ellipse rx="10" ry="4.5" cx="12" cy="12"/>
+                  <ellipse rx="10" ry="4.5" cx="12" cy="12" transform="rotate(60 12 12)"/>
+                  <ellipse rx="10" ry="4.5" cx="12" cy="12" transform="rotate(120 12 12)"/>
+                </svg>
+              </span>
+              <span class="tool-name">React</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 3l9 18H3z"/>
+                </svg>
+              </span>
+              <span class="tool-name">Next.js</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 2c-3.5 0-3 1.5-3 3v2h6V5c0-1.5.5-3-3-3zM9 6H6c-2 0-3 1-3 3v3h6V6zm6 12c3.5 0 3-1.5 3-3v-2h-6v2c0 1.5-.5 3 3 3zm3-4h3c2 0 3-1 3-3v-3h-6v6z"/>
+                </svg>
+              </span>
+              <span class="tool-name">Python</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/>
+                </svg>
+              </span>
+              <span class="tool-name">Claude API</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M4 6h16l-3 3H1zM4 11h16l-3 3H1zM4 16h16l-3 3H1z"/>
+                </svg>
+              </span>
+              <span class="tool-name">Solana</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M4 3h16L4 21h16L4 3z"/>
+                </svg>
+              </span>
+              <span class="tool-name">Kotlin</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="8" cy="8" r="2"/>
+                  <circle cx="16" cy="8" r="2"/>
+                  <circle cx="12" cy="16" r="2"/>
+                  <line x1="10" y1="8" x2="14" y2="8"/>
+                  <line x1="9" y1="10" x2="11" y2="14"/>
+                  <line x1="15" y1="10" x2="13" y2="14"/>
+                </svg>
+              </span>
+              <span class="tool-name">ML / AI</span>
+            </div>
+
+            <div class="tool-cell">
+              <span class="tool-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <circle cx="8" cy="5" r="3" fill="#F24E1E"/>
+                  <circle cx="8" cy="12" r="3" fill="#A259FF"/>
+                  <circle cx="8" cy="19" r="3" fill="#0ACF83"/>
+                  <circle cx="14" cy="5" r="3" fill="#FF7262"/>
+                  <circle cx="14" cy="12" r="3" fill="#1ABCFE"/>
+                </svg>
+              </span>
+              <span class="tool-name">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio + stats -->
+      <div class="about-body">
+        <div class="about-bio reveal">
+          <h3 class="about-heading">One person.<br>The whole thing.</h3>
+          <p>
+            I'm Nova — a solo developer, ML practitioner, and digital illustrator operating
+            under my brand <strong>Novaxel</strong>. I build products from idea to deployment,
+            handling everything: architecture, code, design, and shipping.
+          </p>
+          <p>
+            My work spans full-stack web, mobile apps, Solana / Web3, data science pipelines,
+            and creative tooling. I'm currently progressing through a structured 9-stage ML
+            roadmap targeting ML and data analyst roles.
+          </p>
+          <p>
+            Outside code I do character design and illustration, building the
+            <strong>Aether Verse</strong> — an original IP with deep lore, ongoing series,
+            and open commissions on VGen.
+          </p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Hackathon Projects Submitted</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Tech stacks</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Original IP universes</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="container">
+      <p class="section-label">// 02 selected work</p>
+      <h2 class="section-title reveal">Things I've <em>built and shipped.</em></h2>
+
+      <div class="projects-grid">
+
+        <!-- Mintlens -->
+        <article class="proj-card proj-ai reveal">
+          <div class="proj-top">
+            <div class="proj-icon">🪙</div>
+            <div class="proj-badges">
+              <span class="feat-badge">Hackathon</span>
+            </div>
+          </div>
+          <h3 class="proj-name">Mintlens</h3>
+          <p class="proj-desc">AI token intelligence platform providing real-time sentiment analysis for on-chain assets. Solo built for the Bags.fm Hackathon 2026 (Claude Skills track). Deployed on Railway + Vercel.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">Claude API</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Vercel</span>
+            </div>
+            <a href="https://github.com/Alienxcript/mintlens" target="_blank" class="proj-link" aria-label="View Mintlens on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Solus City -->
+        <article class="proj-card proj-web3 reveal">
+          <div class="proj-top">
+            <div class="proj-icon">🏙️</div>
+            <div class="proj-badges">
+              <span class="feat-badge live-badge">Live</span>
+            </div>
+          </div>
+          <h3 class="proj-name">Solus City</h3>
+          <p class="proj-desc">On-chain crime RPG built on Solana. Co-built with collaborator — full v2 feature waves, syndicate system redesign, UI overhaul, and mainnet deployment at soluscity.xyz.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">Solana</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Web3</span>
+            </div>
+            <a href="https://www.soluscity.xyz" target="_blank" class="proj-link" aria-label="View Solus City Webpage">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- LicenseLens -->
+        <article class="proj-card proj-tool reveal">
+          <div class="proj-top">
+            <div class="proj-icon">📄</div>
+          </div>
+          <h3 class="proj-name">LicenseLens</h3>
+          <p class="proj-desc">Single-file HTML license picker covering 22 software and creative licenses for developers and creators. Deployed via GitHub Pages — zero dependencies.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+            <a href="https://github.com/Alienxcript/LicenseLens" target="_blank" class="proj-link" aria-label="View LicenseLens on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Astermark -->
+        <article class="proj-card proj-mobile reveal">
+          <div class="proj-top">
+            <div class="proj-icon">✍️</div>
+          </div>
+          <h3 class="proj-name">Astermark</h3>
+          <p class="proj-desc">A dedicated ChoiceScript IDE built for Android using Kotlin and WebView. Designed for interactive fiction writers who work on mobile.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Android</span>
+              <span class="tag">WebView</span>
+            </div>
+            <a href="https://github.com/Alienxcript/Astermark" target="_blank" class="proj-link" aria-label="View Astermark on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- PixelPacker -->
+        <article class="proj-card proj-tool reveal">
+          <div class="proj-top">
+            <div class="proj-icon">🗜️</div>
+          </div>
+          <h3 class="proj-name">PixelPacker</h3>
+          <p class="proj-desc">Minimal local web app for compressing and cropping images directly in the browser. Supports PNG, JPEG, WebP, GIF, BMP — bulk compression, crop canvas, format conversion, folder save.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">Canvas API</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <a href="https://github.com/Alienxcript/PixelPacker" target="_blank" class="proj-link" aria-label="View PixelPacker on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Password Generator -->
+        <article class="proj-card proj-python reveal">
+          <div class="proj-top">
+            <div class="proj-icon">🔐</div>
+          </div>
+          <h3 class="proj-name">Password Generator</h3>
+          <p class="proj-desc">Python password generator with both CLI and GUI (Tkinter) versions. Generates secure randomised passwords, copy-to-clipboard, saves to file with timestamps. Zero external dependencies.</p>
+          <div class="proj-footer">
+            <div class="proj-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">CLI</span>
+            </div>
+            <a href="https://github.com/Alienxcript/Password-Generator" target="_blank" class="proj-link" aria-label="View Password Generator on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">// 03 contact</p>
+      <div class="contact-box reveal">
+        <h2 class="contact-heading">Let's build<br><em>something together.</em></h2>
+        <p class="contact-sub">Open to freelance projects, collaborations, and full-time opportunities.</p>
+        <a href="mailto:contact@novalightart.com" class="contact-email">contact@novalightart.com</a>
+        <div class="contact-socials">
+          <a href="https://github.com/Alienxcript" target="_blank" class="social-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            Alienxcript
+          </a>
+          <a href="https://twitter.com/novachrome_x377" target="_blank" class="social-pill">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @novachrome_x377
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 <a href="#">Novaxel</a></p>
+      <p class="footer-right">Built with intent. Shipped solo.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 48);
+    });
+
+    // Mobile nav
+    function toggleNav() {
+      document.getElementById('navDrawer').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('navDrawer').classList.remove('open');
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 90);
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => revealObs.observe(el));
+  </script>
+</body>
+</html>
