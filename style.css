@@ -135,20 +135,19 @@ nav.nav-scrolled {
   transition: 0.3s;
 }
 
-/* Mobile drawer */
+/* Mobile drawer — FIX: use visibility + max-height so transition works correctly */
 .nav-drawer {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0;
   background: rgba(8,8,8,0.97);
   border-bottom: 1px solid var(--border);
-  padding: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.3s;
+  padding: 0 28px;
 }
 .nav-drawer.open {
-  display: flex;
   max-height: 400px;
   padding: 20px 28px 28px;
   gap: 4px;
@@ -345,7 +344,15 @@ section { padding: 100px 0; }
   font-size: 1.6rem;
   color: var(--muted);
 }
-/* If you add a real photo: replace .avatar-placeholder with an <img> */
+/* FIX: Real photo avatar — swap the <div class="avatar-placeholder"> for
+   <img src="your-photo.jpg" alt="Nova" class="avatar-img" /> */
+.avatar-img {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border2);
+  display: block;
+}
 .avatar-status {
   position: absolute;
   bottom: 3px; right: 3px;
@@ -388,7 +395,7 @@ section { padding: 100px 0; }
 .tool-cell:nth-child(5) { border-radius: 2px 2px 2px 8px; }
 .tool-cell:last-child { border-radius: 2px 2px 8px 2px; }
 .tool-cell:hover { border-color: var(--border2); background: var(--surface); }
-.tool-icon { font-size: 1.2rem; line-height: 1; }
+.tool-icon { font-size: 1.2rem; line-height: 1; color: var(--off); }
 .tool-name { font-family: var(--f-mono); font-size: 0.65rem; color: var(--muted); text-align: center; }
 
 /* Bio + stats */
@@ -507,7 +514,7 @@ section { padding: 100px 0; }
   border: 1px solid var(--border2);
   border-radius: 8px;
   display: grid; place-items: center;
-  font-size: 1.1rem;
+  color: var(--off);
   flex-shrink: 0;
 }
 .proj-badges { display: flex; gap: 6px; }

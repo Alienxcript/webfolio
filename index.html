@@ -20,7 +20,7 @@
         <li><a href="#work">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="mailto:contact@novalightart.com" class="nav-cta">Hire me</a>
+      <a href="mailto:hello@novaxel.dev" class="nav-cta">Hire me</a>
       <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -30,7 +30,7 @@
       <a href="#about" onclick="closeNav()">About</a>
       <a href="#work" onclick="closeNav()">Work</a>
       <a href="#contact" onclick="closeNav()">Contact</a>
-      <a href="mailto:contact@novalightart.com" onclick="closeNav()" class="drawer-cta">Hire me</a>
+      <a href="mailto:hello@novaxel.dev" onclick="closeNav()" class="drawer-cta">Hire me</a>
     </div>
   </nav>
 
@@ -92,11 +92,13 @@
     <div class="container">
       <p class="section-label">// 01 about</p>
 
-      <!-- Profile row — inspired by screenshot -->
+      <!-- Profile row -->
       <div class="about-profile reveal">
         <div class="profile-left">
           <div class="avatar-wrap">
-            <!-- Replace src with your actual photo -->
+            <!-- FIX: To use a real photo, replace the line below with:
+                 <img src="your-photo.jpg" alt="Nova" class="avatar-img" />
+                 Make sure your-photo.jpg is in the same folder as index.html -->
             <div class="avatar-placeholder">N</div>
             <span class="avatar-status" title="Available"></span>
           </div>
@@ -181,14 +183,15 @@
               <span class="tool-name">ML / AI</span>
             </div>
 
+            <!-- FIX: Figma icon now uses currentColor instead of hardcoded brand colors -->
             <div class="tool-cell">
               <span class="tool-icon">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <circle cx="8" cy="5" r="3" fill="#F24E1E"/>
-                  <circle cx="8" cy="12" r="3" fill="#A259FF"/>
-                  <circle cx="8" cy="19" r="3" fill="#0ACF83"/>
-                  <circle cx="14" cy="5" r="3" fill="#FF7262"/>
-                  <circle cx="14" cy="12" r="3" fill="#1ABCFE"/>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <circle cx="8" cy="5" r="3"/>
+                  <circle cx="8" cy="12" r="3"/>
+                  <circle cx="8" cy="19" r="3"/>
+                  <circle cx="14" cy="5" r="3"/>
+                  <circle cx="14" cy="12" r="3"/>
                 </svg>
               </span>
               <span class="tool-name">Figma</span>
@@ -248,10 +251,16 @@
 
       <div class="projects-grid">
 
-        <!-- Mintlens -->
+        <!-- Mintlens — FIX: coin/token SVG instead of 🪙 -->
         <article class="proj-card proj-ai reveal">
           <div class="proj-top">
-            <div class="proj-icon">🪙</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <ellipse cx="12" cy="12" rx="4" ry="9"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+              </svg>
+            </div>
             <div class="proj-badges">
               <span class="feat-badge">Hackathon</span>
             </div>
@@ -270,10 +279,17 @@
           </div>
         </article>
 
-        <!-- Solus City -->
+        <!-- Solus City — FIX: buildings SVG instead of 🏙️ -->
         <article class="proj-card proj-web3 reveal">
           <div class="proj-top">
-            <div class="proj-icon">🏙️</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="8" width="7" height="13"/>
+                <rect x="14" y="5" width="7" height="16"/>
+                <rect x="10" y="11" width="4" height="10"/>
+                <line x1="3" y1="21" x2="21" y2="21"/>
+              </svg>
+            </div>
             <div class="proj-badges">
               <span class="feat-badge live-badge">Live</span>
             </div>
@@ -292,10 +308,17 @@
           </div>
         </article>
 
-        <!-- LicenseLens -->
+        <!-- LicenseLens — FIX: document SVG instead of 📄 -->
         <article class="proj-card proj-tool reveal">
           <div class="proj-top">
-            <div class="proj-icon">📄</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="8" y1="13" x2="16" y2="13"/>
+                <line x1="8" y1="17" x2="16" y2="17"/>
+              </svg>
+            </div>
           </div>
           <h3 class="proj-name">LicenseLens</h3>
           <p class="proj-desc">Single-file HTML license picker covering 22 software and creative licenses for developers and creators. Deployed via GitHub Pages — zero dependencies.</p>
@@ -311,10 +334,15 @@
           </div>
         </article>
 
-        <!-- Astermark -->
+        <!-- Astermark — FIX: pen/edit SVG instead of ✍️ -->
         <article class="proj-card proj-mobile reveal">
           <div class="proj-top">
-            <div class="proj-icon">✍️</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
           </div>
           <h3 class="proj-name">Astermark</h3>
           <p class="proj-desc">A dedicated ChoiceScript IDE built for Android using Kotlin and WebView. Designed for interactive fiction writers who work on mobile.</p>
@@ -330,10 +358,16 @@
           </div>
         </article>
 
-        <!-- PixelPacker -->
+        <!-- PixelPacker — FIX: image compress SVG instead of 🗜️ -->
         <article class="proj-card proj-tool reveal">
           <div class="proj-top">
-            <div class="proj-icon">🗜️</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
           </div>
           <h3 class="proj-name">PixelPacker</h3>
           <p class="proj-desc">Minimal local web app for compressing and cropping images directly in the browser. Supports PNG, JPEG, WebP, GIF, BMP — bulk compression, crop canvas, format conversion, folder save.</p>
@@ -349,10 +383,15 @@
           </div>
         </article>
 
-        <!-- Password Generator -->
+        <!-- Password Generator — FIX: lock SVG instead of 🔐 -->
         <article class="proj-card proj-python reveal">
           <div class="proj-top">
-            <div class="proj-icon">🔐</div>
+            <div class="proj-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="11" width="14" height="11" rx="2"/>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+              </svg>
+            </div>
           </div>
           <h3 class="proj-name">Password Generator</h3>
           <p class="proj-desc">Python password generator with both CLI and GUI (Tkinter) versions. Generates secure randomised passwords, copy-to-clipboard, saves to file with timestamps. Zero external dependencies.</p>
@@ -379,7 +418,7 @@
       <div class="contact-box reveal">
         <h2 class="contact-heading">Let's build<br><em>something together.</em></h2>
         <p class="contact-sub">Open to freelance projects, collaborations, and full-time opportunities.</p>
-        <a href="mailto:contact@novalightart.com" class="contact-email">contact@novalightart.com</a>
+        <a href="mailto:hello@novaxel.dev" class="contact-email">hello@novaxel.dev</a>
         <div class="contact-socials">
           <a href="https://github.com/Alienxcript" target="_blank" class="social-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
@@ -420,14 +459,15 @@
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
     const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 90);
-          revealObs.unobserve(entry.target);
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.08 });
+    }, { threshold: 0.12 });
     revealEls.forEach(el => revealObs.observe(el));
   </script>
+
 </body>
 </html>
