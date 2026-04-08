@@ -333,19 +333,6 @@ section { padding: 100px 0; }
   gap: 18px;
 }
 .avatar-wrap { position: relative; flex-shrink: 0; }
-.avatar-placeholder {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 2px solid var(--border2);
-  display: grid; place-items: center;
-  font-family: var(--f-display);
-  font-weight: 800;
-  font-size: 1.6rem;
-  color: var(--muted);
-}
-/* FIX: Real photo avatar — swap the <div class="avatar-placeholder"> for
-   <img src="your-photo.jpg" alt="Nova" class="avatar-img" /> */
 .avatar-img {
   width: 72px; height: 72px;
   border-radius: 50%;
